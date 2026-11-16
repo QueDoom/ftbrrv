@@ -8,20 +8,34 @@ import cc.cassian.rrv.common.overlay.itemlist.panel.SidePanelOverlay;
 import cc.cassian.rrv.common.overlay.itemlist.view.ItemViewOverlay;
 import dev.ftb.mods.ftblibrary.client.config.Tristate;
 import dev.ftb.mods.ftblibrary.client.gui.input.Key;
-import dev.ftb.mods.ftblibrary.platform.fluid.FluidStack;
-import dev.ftb.mods.ftbxmodcompat.ftbquests.recipemod_common.BaseRecipeHelper;
-import net.minecraft.core.registries.BuiltInRegistries;
+import dev.ftb.mods.ftbquests.integration.RecipeModHelper;
+import dev.ftb.mods.ftbquests.quest.QuestObjectBase;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.material.Fluid;
 
 import java.util.Collection;
 
-public class RRVRecipeHelper extends BaseRecipeHelper {
+public class RRVRecipeHelper implements RecipeModHelper {
     @Override
-    protected void refreshQuests() {
+    public void refreshAll(RecipeModHelper.Components component) {
+        switch (component) {
+            case QUESTS -> refreshQuests();
+            case LOOT_CRATES -> refreshLootcrates();
+        }
     }
 
     @Override
+    public void refreshRecipes(QuestObjectBase object) {
+        object.componentsToRefresh().forEach(this::refreshAll);
+    }
+
+    @Override
+    public boolean isRecipeModAvailable() {
+        return true;
+    }
+
+    protected void refreshQuests() {
+    }
+
     protected void refreshLootcrates() {
     }
 
