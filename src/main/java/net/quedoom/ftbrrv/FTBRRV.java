@@ -1,7 +1,9 @@
 package net.quedoom.ftbrrv;
 
+import dev.ftb.mods.ftbquests.FTBQuests;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.Identifier;
 
 import org.slf4j.Logger;
@@ -13,7 +15,8 @@ public class FTBRRV implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		if (FabricLoader.getInstance().isModLoaded("rrv"))
+			FTBQuests.setRecipeModHelper(new RRVRecipeHelper());
 	}
 
 	public static Identifier id(String path) {

@@ -24,8 +24,11 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.20.1",
-		"minecraft": "~26.3",
+		"minecraft": "~26.1",
 		"java": ">=25",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"ftbquests": "26.1.2.10",
+		"ftblibrary": "26.1.2.12",
+		"quet": "2.2.5"
 	}
 }
