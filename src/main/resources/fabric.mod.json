@@ -28,7 +28,6 @@
 		"java": ">=25",
 		"fabric-api": "*",
 		"ftbquests": "26.1.2.10",
-		"ftblibrary": "26.1.2.12",
-		"quet": "2.2.5"
+		"ftblibrary": "26.1.2.12"
 	}
 }

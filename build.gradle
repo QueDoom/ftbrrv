@@ -35,7 +35,6 @@ dependencies {
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
 	implementation("cc.cassian.rrv:reliable-recipe-viewer-fabric:${rrv_version}+${minecraft_version}")
-	implementation("maven.modrinth:quet:${quet_version}")
 
 	implementation "curse.maven:ftb-library-fabric-438495:9456007"
 	implementation "curse.maven:ftb-quests-fabric-438496:9456216"
