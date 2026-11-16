@@ -1,9 +1,6 @@
 # FTB RRV
 
-## Setup
+Currently adds compatibility between Reliable Recipe Viewer and:
+ - FTB Quests
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This is under [MIT License](https://license.quedoom.com/) so do whatever. Do not feed it into ai though me no likey.[assets](src/main/resources/assets)
